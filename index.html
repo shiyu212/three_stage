@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>index</title>
+</head>
+
+<body>
+  <canvas class="webgl"></canvas>
+  <div class="ad_board">
+    <div class="ad_title">自适应头盔</div>
+    <div class="ad_content">叠最厚的甲 挨最毒的打</div>
+    <div class="ad_content_e">So boring! You didn't eat lunch?</div>
+  </div>
+</body>
+
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    /* overflow: hidden; */
+    background-color: #000000;
+  }
+
+  .webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+  }
+
+  .ad_board {
+    position: absolute;
+    color: aliceblue;
+    top: 38%;
+    left: 50%;
+    transform: scaleX(0);
+  }
+
+  .toMove {
+    transform: scaleX(1);
+    animation: toRight 6s;
+  }
+
+  @keyframes toRight {
+    0% {
+      left: 40%;
+      opacity: .2
+    }
+
+    100% {
+      left: 50%;
+      opacity: 1
+    }
+  }
+
+  .ad_title {
+    font-size: 43px;
+    margin-bottom: 40px;
+  }
+
+  .ad_content {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .ad_content_e {
+    font-size: 20px;
+  }
+</style>
