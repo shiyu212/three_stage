@@ -20,10 +20,11 @@ export default class Script {
         this.experience.scene.background = new THREE.Color(0x000000)
 
         this.ease = 'power2'
-        this.script1()
     }
 
-
+    start() {
+        this.script1()
+    }
 
     async script1() {
         // 脚本 灯光自右往左平扫

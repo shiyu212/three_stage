@@ -21,6 +21,10 @@ export default class World extends EventEmitter {
         this.environment = new Environment()
     }
 
+    start(){
+        this.script.start()
+    }
+
     ready() {
         this.model = new Model()
         this.script = new Script()

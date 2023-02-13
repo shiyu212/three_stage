@@ -13,9 +13,14 @@
     <div class="ad_content_e">So boring! You didn't eat lunch?</div>
   </div>
   <div class="black_board">
-    <div class="loading_bar">
+    <div class="process_bar">
+      <div class="loading_bar">
+      </div>
+      <div class="bar_btn huojian ended"></div>
     </div>
-    <div class="bar_btn huojian ended"></div>
+    <div class="start_btn">
+      Start
+    </div>
   </div>
 </body>
 
@@ -113,19 +118,37 @@
     20% {
       left: calc(20vw - 39px);
     }
+
     30% {
       left: calc(90vw - 39px);
     }
+
     100% {
       left: calc(100vw - 40px);
     }
   }
 
   .ended {
-    animation: toEnd 6s;
+    animation: toEnd ease-in-out 6s;
   }
 
-  .hidden{
-    scale: 0;
+  .hidden {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .start_btn {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    left: calc(50vw - 95px);
+    top: calc(50vh - 100px);
+    width: 190px;
+    height: 110px;
+    border: #fff solid 2px;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    line-height: 110px;
   }
 </style>
