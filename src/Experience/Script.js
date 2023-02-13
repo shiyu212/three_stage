@@ -15,7 +15,7 @@ export default class Script {
         this.model = this.world.model.instance
         this.directionalLight = this.world.environment.directionalLight.instance
 
-        this.experience.camera._position.z = 400
+        this.experience.camera._position.z = 350
         this.experience.camera.updateCamera()
         this.experience.scene.background = new THREE.Color(0x000000)
 

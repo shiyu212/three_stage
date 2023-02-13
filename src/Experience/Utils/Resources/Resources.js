@@ -36,6 +36,10 @@ export default class Resources extends EventEmitter {
                 source.path,
                 (file) => {
                     this.sourceLoaded(source, file)
+                },
+                (xhr) => {
+                    console.log (xhr);
+                    // console.log((xhr.loaded / xhr.total * 100) + '% loaded');
                 }
             )
         }
